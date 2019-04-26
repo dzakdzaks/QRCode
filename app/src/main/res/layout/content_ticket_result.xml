@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TicketResultActivity">
+
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_no_ticket_found"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/dimen_20"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <com.dzakdzaks.qrcode.TicketView
+        android:id="@+id/layout_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:textAllCaps="true"
+            android:textSize="@dimen/lbl_directory" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textAllCaps="true"
+            android:textColor="#111"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/lbl_movie_name" />
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_poster_height"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/lbl_duration"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/lbl_value"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/lbl_genre"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/lbl_value"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/lbl_rating"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/lbl_value"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/lbl_price"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/lbl_value"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.dzakdzaks.qrcode.TicketView>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@android:color/white"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="visible" />
+</RelativeLayout>
